@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Didi 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ffe0f0, #fff);
+      color: #333;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(255,182,193,0.55), rgba(255,182,193,0.55)),
+                  url('bg.jpg') center/cover no-repeat;
+      color: #fff;
+      padding: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #d63384;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+    .memories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.08) rotate(1deg);
+      box-shadow: 0 20px 40px rgba(214,51,132,0.35);
+      filter: brightness(1.05);
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 0.95rem;
+      color: #b03060;
+    }
+    .music-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff85b3;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 18px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .music-btn.playing {
+      animation: pulse 1.5s infinite;
+      box-shadow: 0 0 25px rgba(255,133,179,0.8);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    .music-btn:hover {
+      background: #f06595;
+    }
+    
+    
+    .memory {
+      background: #fff0f6;
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .memory h3 {
+      margin-top: 0;
+      color: #c2255c;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #ffd6e8;
+      color: #6a1b4d;
+    }
+      /* Floating Hearts */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+      z-index: 999;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-110vh) scale(1.4); opacity: 0; }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: fixed;
+      top: -10px;
+      width: 8px;
+      height: 14px;
+      animation: fall 4s linear infinite;
+      z-index: 998;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Confetti & Hearts Container -->
+  <div id="effects"></div>
+
+  <!-- Hero Section -->
+  <header>
+    <div>
+      <h1>Happy Birthday Didi 🎂💖</h1>
+      <p>
+        To the most caring, understanding and beautiful sister,
+        this small website is a surprise made with lots of love.
+      </p>
+    </div>
+  </header>
+
+  <!-- Birthday Wish Section -->
+  <section>
+    <h2 class="section-title">A Special Birthday Wish 💐</h2>
+    <div class="card">
+      <p>
+        Dear Didi,<br><br>
+        On your special day, I just want to say how grateful I am to have you in my life.
+        You are not just my sister, but also my guide, my support system, and my best friend.
+        Whenever I feel low or confused, your words always give me strength.
+        <br><br>
+        May your life be filled with happiness, success, good health, and endless smiles.
+        You truly deserve all the love in the world. 💖
+        <br><br>
+        There are many things to say but words are the limit to show how much you mean to me!!
+        Justtt
+        <br><br>
+        Happy Birthday once again, Didi! 🌸✨
+      </p>
+    </div>
+  </section>
+
+  <!-- Memories Section -->
+  <section>
+    <h2 class="section-title">Beautiful Memories 🌸</h2>
+    <div class="memories">
+      <div class="memory">
+        <h3>Childhood Days</h3>
+        <p>The fun moments, laughter, and those nani's house memories always stay close to our heart.</p>
+      </div>
+      <div class="memory">
+        <h3>Life Lessons</h3>
+        <p>Your advice and guidance have helped me grow and understand myself and life better.</p>
+      </div>
+      <div class="memory">
+        <h3>Emotional Support</h3>
+        <p>No matter the situation, you always stood by me and believed in me and always guide me.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section>
+    <h2 class="section-title">Our Beautiful Moments 📸💖</h2>
+    <div class="gallery">
+      <div>
+        <img src="1.jpg" alt="Memory 1">
+        <div class="caption">That crazy meetup in Udhyan 😅💕</div>
+      </div>
+      <div>
+        <img src="2.jpg" alt="Memory 2">
+        <div class="caption">My forever guide & best sister 🌸</div>
+      </div>
+      <div>
+        <img src="3.jpg" alt="Memory 3">
+        <div class="caption">Memories I’ll always cherish 😂🤣💖</div>
+      </div>
+      <div>
+        <img src="4.jpg" alt="Memory 4">
+        <div class="caption">Those healing sessions by you 😅✨ priceless</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Thank You Section -->
+  <section>
+    <h2 class="section-title">Thank You, Didi 💗</h2>
+    <div style="text-align:center;">
+    <div class="card">
+      <p>
+        Thank you for being the wonderful person you are.
+        Thank you for your care, love, and understanding.
+        I feel lucky and proud to have a sister like you.
+        <br><br>
+        This webpage is very small, but the love behind it is endless. 🌷
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <!-- Background Music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <button class="music-btn" onclick="toggleMusic()">▶ Play Music 🎵</button>
+
+  <footer>
+    <p>
+      Made with ❤️ by your loving brother<br>
+      Happy Birthday once again, Didi 🎉
+    </p>
+  </footer>
+
+  <script>
+    // Floating Hearts
+    const effects = document.getElementById('effects');
+    const hearts = ['💖','💗','💝','💕'];
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+      effects.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }, 600);
+
+    // Confetti on Load
+    const colors = ['#ff6b6b', '#ffd93d', '#6bcB77', '#4dabf7', '#f06595'];
+    for (let i = 0; i < 80; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animationDuration = (2 + Math.random() * 3) + 's';
+      effects.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 5000);
+    }
+
+    // Music Toggle (FIXED)
+    function toggleMusic() {
+      const music = document.getElementById('bgMusic');
+      music.volume = 0.3;
+      const btn = document.querySelector('.music-btn');
+
+      if (!music) return;
+
+      if (music.paused) {
+        music.play().then(() => {
+          btn.innerText = '⏸ Pause Music';
+          btn.classList.add('playing');
+        }).catch(err => {
+          alert('Please tap the button again to allow music 🎵');
+        });
+      } else {
+        music.pause();
+        btn.innerText = '▶ Play Music 🎵';
+        btn.classList.remove('playing');
+      }
+    }
+  </script>
+
+</body>
+</html>
